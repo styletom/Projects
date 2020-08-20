@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <script type="text/javascript" src="https://api.mapy.cz/loader.js"></script>
+	<script type="text/javascript">Loader.load()</script>
+  <title>Raušovi</title>
+  <link rel="shortcut icon" href="/favicon.ico?v=2" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,700|Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135700471-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135700471-1');
+  </script>
+</head>
+
+<body>
+
+<a href="#top"><img style="position: fixed; float: left; height: 50px; z-index: 6;" src="onlyM.png"></a>
+  <header>
+    <ul>
+      <a class="anchor" href="#aobrad"><li>Obřad</li></a>
+      <a class="anchor" href="#ahostina"><li>Hostina</li></a>
+      <!--a class="anchor" href="#anas"><li>O nás</li></a-->
+      <a class="anchor" href="#adary"><li>Dary</li></a>
+      <a class="anchor" href="#akontakt"><li>Kontakty</li></a>
+    </ul>
+  </header>
+
+<span id="zacatek"></span>
+
+  <div class="welcome">
+    <img class="uvodni" src="uvodni.jpg">
+    <!--img class="logo" src="M^2 square transparent.png"-->
+    <h1>Michaela & Michal</h1>
+    <h2>6. DUBNA 2019</h2>
+  </div>
+
+  <div id="obrad">
+    <div class="obradRow">
+      <a class="anchor" href="#aobrad"><i class="arrow down"></i></a>
+      <h2><span id="aobrad"></span>OBŘAD</h2>
+      <div class="leftCol textCol">
+        <h4 style="margin-top: 70px">KDY</h4>
+        <h5>6. dubna</h5>
+        <h5>ve 14 hodin</h5>
+      </div>
+      <div class="rightCol">
+        <img id="dvorana1" src="dvorana1.jpg">
+      </div>
+    </div>
+
+    <div class="obradRow">
+      <div class="leftCol">
+        <img id="dvorana2" src="dvorana2.jpg">
+      </div>
+      <div class="rightCol textCol">
+        <h4 style="margin-top: 55px;">KDE</h4>
+        <h5>Antonínská 1</h5>
+        <h5>Brno-střed</h5>
+      </div>
+    </div>
+  </div>
+
+  <!--div class="meziobraz">
+    <img src="_DSC5662-Edit - nejlepší.jpg">
+  </div-->
+
+
+
+  <div id="jakobrad">
+    <hr style="height:1px; border: 0px;">
+    <h2><span id="ajakobrad"></span>JAK SE DOSTAT NA OBŘAD</h2>
+    <p style="text-align: center;"> Rádi bychom Vám pomohli s tím, jak se za námi dostat na svatební obřad:</p>
+    <!--h4 style="margin-top: 15px;">MHD</h4-->
+    <img class="vehicles1" src="doubleTram.png">
+    <p class="jakobradText"> Kdo přijedete jen na obřad a nejste "přespolní", doporučujeme využít městskou hromadnou dopravu:</p>
+    <p class="list">- zastávka Antonínská - spoj 1 a 6</p>
+    <p class="list">- zastávka Smetanova  - spoj 32, 34 a 36</p>
+    <p class="list" style="padding-bottom: 20px;">- zastávka Grohova    - spoj 3 a 12</p>
+
+    <!--ul>
+    <li>- zastávka Antonínská - spoj 1 a 6</li>
+    <li>- zastávka Smetanova  - spoj 32, 34 a 36</li>
+    <li>- zastávka Grohova    - spoj 3 a 12</li>
+  </ul-->
+
+    <!--h4 style="margin-top: 25px;">PARKOVÁNÍ</h4-->
+    <img class="vehicles2" src="car.png">
+    <p class="jakobradText"> Pro ty, kteří přijedou autem, jsou dvě možnosti zaparkování:</p>
+    <p class="list"> - parkovací dům Rozmarýn</p>
+    <p class="list" style="padding-bottom: 20px;"> - parkování v bočních ulicích - pozor na nově zavedený systém zón</p>
+
+    <!--ul>
+    <li> - parkovací dům Rozmarýn</li>
+    <li> - parkování v bočních ulicích - pozor na nově zavedený systém zón</li>
+  </ul-->
+
+
+    <!--iframe src="https://api.mapy.cz/frame?params=%7B%22x%22%3A16.6049546003039%2C%22y%22%3A49.202587140500285%2C%22base%22%3A%221%22%2C%22layers%22%3A%5B%5D%2C%22zoom%22%3A17%2C%22url%22%3A%22https%3A%2F%2Fmapy.cz%2Fs%2F3p3fP%22%2C%22mark%22%3Anull%2C%22overview%22%3Afalse%7D&amp;width=500&amp;height=333&amp;lang=cs" width="500" height="333" style="border:none; margin-top: 30px;" frameBorder="0"></iframe-->
+    <div id="m" style="width:600px; height:400px; display: block; margin-top: 25px; margin-left: auto; margin-right: auto;"></div>
+	  <script type="text/javascript">
+      var center = SMap.Coords.fromWGS84(16.6036139, 49.2015406);
+      var m = new SMap(JAK.gel("m"), center, 16);
+      m.addDefaultLayer(SMap.DEF_BASE).enable();
+      m.addDefaultControls();
+
+      var layer = new SMap.Layer.Marker();
+      m.addLayer(layer);
+      layer.enable();
+
+      var card = new SMap.Card();
+      card.getHeader().innerHTML = "<strong>Místo obřadu</strong>";
+
+      var options = {
+          title: "rektorát VUT"
+      };
+      var marker = new SMap.Marker(center, "myMarker", options);
+      marker.decorate(SMap.Marker.Feature.Card, card);
+      layer.addMarker(marker);
+	  </script>
+  </div>
+
+  <div id="hostina">
+    <hr style="height:1px; border: 0px;">
+    <h2 style="margin-top: 35px"><span id="ahostina"></span>HOSTINA</h2>
+    <p>Vás, které jsme pozvali na hostinu, prosíme, abyste se přesunuli do kulturního domu v Bedřichovicích. Nemáte-li vlastní dopravní prostředek nebo se s kým svézt, odvoz vám zajistíme.</p>
+    <p>Kulturní dům bude otevřený od 16:00 a společně slavnostně zahájíme svatební hostinu v 17:00.</p>
+    <p>Předem se omlouváme za stíženou situaci s parkováním, kterého je nedostatek. Prosíme vás, abyste parkovací místa před kulturním domem nechali volná novomanželům a nejbližší rodině.</p>
+    <p>S případnými dotazy se obracejte na koordinátora svatební hostiny:</p>
+    <p class="list">Marek Mléčka - 731 047 585</p>
+    <div id="mm" style="width:600px; height:400px; display: block; margin-top: 25px; margin-left: auto; margin-right: auto;"></div>
+	  <script type="text/javascript">
+      var center = SMap.Coords.fromWGS84(16.72124, 49.17972);
+      var m = new SMap(JAK.gel("mm"), center, 16);
+      m.addDefaultLayer(SMap.DEF_BASE).enable();
+      m.addDefaultControls();
+
+      var layer = new SMap.Layer.Marker();
+      m.addLayer(layer);
+      layer.enable();
+
+      var card = new SMap.Card();
+      card.getHeader().innerHTML = "<strong>Kulturní dům</strong>";
+
+
+      var options = {
+          title: "Kulturní dům"
+      };
+      var marker = new SMap.Marker(center, "myMarker", options);
+      marker.decorate(SMap.Marker.Feature.Card, card);
+      layer.addMarker(marker);
+	  </script>
+  </div>
+
+  <!--div id="onas">
+    <h2><span id="anas"></span>O NÁS</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean fermentum risus id tortor. Aliquam ante. Fusce nibh. Integer pellentesque quam vel velit. Aliquam erat volutpat. Fusce nibh. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Sed convallis magna eu sem. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam dictum tincidunt diam. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim.</p>
+    <img class="uvodni" src="onas.jpg">
+  </div-->
+
+  <div id="dary">
+    <hr style="height:1px; border: 0px;">
+    <h2 style="margin-top: 35px;"><span id="adary"></span>DARY</h2>
+    <p>Pokud byste nás chtěli poctít svatebním darem, budeme potěšeni za finanční příspěvek, který bude z praktických důvodů vhodnější než věcné dary.</p>
+    <img src="onas.jpg">
+  </div>
+
+  <div id="kontakt">
+    <span id="akontakt"></span>
+    <table class="tg">
+      <tr>
+        <th class="tg-baqh" colspan="3"><h2 id="jmena" style="text-align: right;">Michaela</h2></th>
+        <th class="tg-baqh" colspan="2"><img src="logo.png"></th>
+        <th class="tg-baqh" colspan="3"><h2 id="jmena" style="text-align: left">Michal</h2></th>
+      </tr>
+      <tr>
+        <td class="tg-baqh" colspan="2">Třebčínská 134</td>
+        <td class="tg-baqh" colspan="2">chvatalovamisa@gmail.com</td>
+        <td class="tg-baqh" colspan="2">michallraus@gmail.com</td>
+        <td class="tg-baqh" colspan="2">Klarisky 1</td>
+      </tr>
+      <tr>
+        <td class="tg-baqh" colspan="2">783 49 Lutín</td>
+        <td class="tg-baqh" colspan="2">777 102 803</td>
+        <td class="tg-baqh" colspan="2">736 615 820</td>
+        <td class="tg-baqh" colspan="2">619 00 Brno</td>
+      </tr>
+    </table>
+    <table class="tg" style="margin-top: 20px;">
+      <tr>
+        <th class="tg-s268"><h2 style="font-size: 14px;">Marek Mléčka:</h2></th>
+        <th class="tg-s268"> 731 047 585</th>
+        <th>-</th>
+        <th class="tg-s268">koordinátor svatební hostiny</th>
+        <th class="tg-s268"></th>
+      </tr>
+    </table>
+  </div>
+
+  <footer>
+
+  </footer>
+</body>
+</html>
